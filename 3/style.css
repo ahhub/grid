@@ -1,0 +1,25 @@
+.product-grid {
+  display: grid;
+  /* സ്ക്രീൻ ചെറുതാകുമ്പോൾ ഐറ്റങ്ങൾ തനിയെ താഴേക്ക് വരും */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background: #ffffff;
+  border: 2px solid #3498db;
+  padding: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  background-color: #3498db;
+  color: white;
+}

@@ -1,0 +1,31 @@
+.grid-container {
+  display: grid;
+  /* 3 കോളങ്ങൾ, നടുവിലത്തെ കോളം ബാക്കി സ്ഥലം എടുക്കും */
+  grid-template-columns: 200px 1fr 150px;
+  grid-template-rows: 80px 300px 60px;
+  gap: 15px;
+
+  /* ഇമേജിലെ പോലെ അലൈൻമെന്റ് സെറ്റ് ചെയ്യുന്നു */
+  justify-items: stretch;
+  align-items: center;
+}
+
+.header {
+  grid-column: 1 / -1; /* മുഴുവൻ വീതി */
+  background: #f39c12;
+}
+
+.main {
+  grid-column: span 2; /* രണ്ട് കോളങ്ങളുടെ വീതി */
+  background: #3498db;
+}
+
+.sidebar {
+  background: #2ecc71;
+}
+
+.footer {
+  grid-column: 1 / -1;
+  background: #9b59b6;
+  justify-self: center; /* ഇതിനെ മാത്രം നടുവിലാക്കുന്നു */
+}

@@ -1,0 +1,62 @@
+.dashboard-container {
+  display: grid;
+  /* 4 കോളങ്ങൾ നിർമ്മിക്കുന്നു, വശങ്ങളിൽ 200px ഉം നടുവിൽ ഫ്ലെക്സിബിൾ ആയ സ്ഥലവും */
+  grid-template-columns: 200px repeat(3, 1fr);
+  /* വരികളുടെ ഉയരം നിശ്ചയിക്കുന്നു */
+  grid-template-rows: 80px minmax(150px, auto) 1fr 60px;
+  gap: 15px;
+  height: 100vh;
+  padding: 10px;
+}
+
+/* Header: എല്ലാ കോളങ്ങളിലും വ്യാപിച്ചു കിടക്കുന്നു */
+.header {
+  grid-column: 1 / -1; /* ആദ്യത്തെ ലൈൻ മുതൽ അവസാനത്തെ ലൈൻ വരെ */
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+/* Sidebar: താഴെ വരെ നീളുന്നു (Header നും Footer നും ഇടയിൽ) */
+.sidebar {
+  grid-row: 2 / 4;
+  background-color: #34495e;
+  color: white;
+  padding: 20px;
+}
+
+/* Main Chart: രണ്ട് കോളങ്ങളുടെ വീതി എടുക്കുന്നു */
+.main-chart {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #ecf0f1;
+  border: 2px dashed #bdc3c7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* മറ്റ് ചെറിയ കാർഡുകൾ */
+.stat-card {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.info-box {
+  background-color: #2ecc71;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Footer: എല്ലാ കോളങ്ങളിലും വ്യാപിക്കുന്നു */
+.footer {
+  grid-column: 1 / -1;
+  background-color: #bdc3c7;
+  text-align: center;
+  line-height: 60px;
+}
